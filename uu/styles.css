@@ -1,0 +1,53 @@
+body {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #aabbdd;
+    overflow: hidden;
+     background-image: linear-gradient(135deg, #ff6384, #ff8b67, #ffbc49, #ffd82b, #f9ed32, #c1eb3e, #53d769, #12b7b0, #2273b9, #7a3eb0, #ad3a90, #d93b71);
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s ease infinite;
+
+}
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    text-align: center;
+     position: relative;
+}
+
+.message {
+    font-size: 50px;
+     position: relative;
+}
+
+.balloon {
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    background-color: red;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-200px) rotate(180deg);
+    }
+}
